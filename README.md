@@ -1,6 +1,7 @@
 # Say Stocks
 
 Welcome to Say Stocks! The simple stock tracking platform of the future
+Please note there is an API request limit of 60 calls/minute, please be nice :)
 
 ## This project is deployed and can be viewed here:
 
