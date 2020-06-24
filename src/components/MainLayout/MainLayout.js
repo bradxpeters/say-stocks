@@ -1,12 +1,12 @@
-import React from 'react';
-import { Row, Col } from 'react-flexbox-grid';
-import AddNewStock from '../AddNewStock';
-import StockTrackingRow from '../StockTrackingRow';
+import React from "react";
+import { Row, Col } from "react-flexbox-grid";
+import AddNewStock from "../AddNewStock";
+import StockTrackingRow from "../StockTrackingRow";
 
 const style = {
   container: {
-    backgroundColor: '#393f45',
-    height: '100%',
+    backgroundColor: "#393f45",
+    height: "100%",
   },
 };
 
@@ -15,7 +15,7 @@ const MainLayout = () => {
     <div style={style.container}>
       <Row>
         <Col xs={12}>
-          <Row center='xs'>
+          <Row center="xs">
             <AddNewStock />
           </Row>
         </Col>

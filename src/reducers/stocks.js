@@ -3,7 +3,7 @@ const initialState = {
   trackedStocks: [],
 };
 
-const todos = (state = initialState, action) => {
+const stocks = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_STOCK_QUOTE_SUCCESS":
       let newArray = state.trackedStocks.slice();
@@ -14,15 +14,20 @@ const todos = (state = initialState, action) => {
         currentStockQuote: action.data,
         trackedStocks: newArray,
       };
-    //     case "FETCH_STOCK_QUOTE":
-    //       return state.map((stock) =>
-    //         stock.id === action.id
-    //           ? { ...stock, completed: !stock.completed }
-    //           : stock
-    //       );
+
+    case "REMOVE_TRACKED_STOCK":
+      const removedArray = state.trackedStocks.filter(
+        (stock) => stock.symbol !== action.data
+      );
+
+      return {
+        ...state,
+        trackedStocks: removedArray,
+      };
+
     default:
       return state;
   }
 };
 
-export default todos;
+export default stocks;
