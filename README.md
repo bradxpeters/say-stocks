@@ -1,3 +1,7 @@
+# Say Stocks
+
+Welcome to Say Stocks! The simple stock tracking platform of the future
+
 ## This project is deployed and can be viewed here:
 
 [bradpeters.dev](https://bradpeters.dev)
@@ -6,7 +10,7 @@ Note: In the event the above website isn't working, please try the direct S3 lin
 
 Alternatively, you can run the project locally with a simple:
 
-### `yarn start`
+`yarn start`
 
 This runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
