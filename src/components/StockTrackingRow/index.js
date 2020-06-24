@@ -1,3 +1,6 @@
 import StockTrackingRow from "./StockTrackingRow";
+import { connect } from "react-redux";
 
-export default StockTrackingRow
+export default connect(({ stocks }) => ({
+  trackedStocks: stocks.trackedStocks,
+}))(StockTrackingRow);

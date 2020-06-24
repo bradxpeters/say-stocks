@@ -1,16 +1,27 @@
-import React from "react";
+import React from 'react';
+import { Row, Col } from 'react-flexbox-grid';
+import StockDisplayBox from '../StockDisplayBox/StockDisplayBox';
 
 const style = {
   container: {
-    backgroundColor: "grey",
-    height: 40,
+    height: 100,
   },
 };
 
-const StockTrackingRow = () => {
+const StockTrackingRow = ({ trackedStocks }) => {
+  const uniqeStocks = [...new Set(trackedStocks)];
+
   return (
-    <div id={"tracking_row"} style={style.container}>
-      Stock Tracking Row
+    <div id={'tracking_row'} style={style.container}>
+      <Row>
+        {uniqeStocks.map((stock, i) => {
+          return (
+            <Col key={`${stock.symbol}-${i}`} xs={1}>
+              <StockDisplayBox symbol={stock.symbol} price={stock.c} />
+            </Col>
+          );
+        })}
+      </Row>
     </div>
   );
 };
